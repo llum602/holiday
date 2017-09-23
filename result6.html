@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+	body {
+		background-color: #AED6F1;
+		background-repeat: no-repeat;
+	}
+       #map {
+        height: 800px;
+        width: 800px;
+       }
+    </style>
+  </head>
+	<body background = "https://vignette.wikia.nocookie.net/glee/images/d/d7/Sky.jpg/revision/latest?cb=20130910145646">
+  <center>
+    <h2>You Should Travel To
+	<b>French quarter, New Orleans</b>
+	</h2>
+	<p></p>
+	<h3>
+	</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var location1 = {lat:29.9584426, lng: -90.0644107};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: location1
+        });
+        var marker1 = new google.maps.Marker({
+          position: location1,
+          map: map
+        });
+
+        }
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLAEYtLhtmSfgmcSIi3Qyb5ffkHb1HUfE&callback=initMap">
+    </script>
+  </body
+  </center>
+</html>

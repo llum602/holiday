@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+	body {
+		background-color: #AED6F1;
+		background-repeat: no-repeat;
+	}
+       #map {
+        height: 800px;
+        width: 800px;
+       }
+    </style>
+  </head>
+	<body background = "https://vignette.wikia.nocookie.net/glee/images/d/d7/Sky.jpg/revision/latest?cb=20130910145646">
+  <center>
+    <h2>You Should Travel To
+	<b>Olympic National Park</b>
+	</h2>
+	<p></p>
+	<h3>Other suggestions: Napa Valley, Catalina Island, Saint Augustine
+	</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var location1 = {lat:47.8021067, lng: -123.60435239999998};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: location1
+        });
+        var marker1 = new google.maps.Marker({
+          position: location1,
+          map: map
+        });
+        var location2 = {lat:38.4274315, lng:-122.3943299};
+       // var map = new google.maps.Map(document.getElementById('map'),{
+        //	zoom: 3, 
+        //	center: location2
+        //});
+        var marker2 = new google.maps.Marker({
+        	position: location2,
+        	map:map
+        });
+	var location3 = {lat:33.3878856, lng:-118.41631030000002};
+       // var map = new google.maps.Map(document.getElementById('map'),{
+        //	zoom: 3, 
+        //	center: location3
+        //});
+        var marker3 = new google.maps.Marker({
+        	position: location3,
+        	map:map
+        });
+	var location4 = {lat:29.90124370000001, lng:-81.31243410000002};
+       // var map = new google.maps.Map(document.getElementById('map'),{
+        //	zoom: 3, 
+        //	center: location4
+        //});
+        var marker4 = new google.maps.Marker({
+        	position: location4,
+        	map:map
+        })
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLAEYtLhtmSfgmcSIi3Qyb5ffkHb1HUfE&callback=initMap">
+    </script>
+  </body
+  </center>
+</html>

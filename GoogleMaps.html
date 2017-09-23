@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+       #map {
+        height: 800px;
+        width: 800px;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>You Should Travel To</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var location1 = {lat:37.7749295, lng: -122.41941550000001};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: location1
+        });
+        var marker1 = new google.maps.Marker({
+          position: location1,
+          map: map
+        });
+        var location2 = {lat:42.3600825, lng:-71.05888010000001};
+       // var map = new google.maps.Map(document.getElementById('map'),{
+        //	zoom: 3, 
+        //	center: location2
+        //});
+        var marker2 = new google.maps.Marker({
+        	position: location2,
+        	map:map
+        })
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLAEYtLhtmSfgmcSIi3Qyb5ffkHb1HUfE&callback=initMap">
+    </script>
+  </body>
+</html>
